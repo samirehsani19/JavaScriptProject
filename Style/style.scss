@@ -1,0 +1,36 @@
+@import './variables';
+@import './footer';
+@import './main';
+
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.top-bar{
+    background: $bgground;
+    @include flexCenter();
+
+    ul{
+        @include flexCenter();
+        margin: $margin;
+        padding: $padding;
+        width: 80%;
+
+    }
+    
+    li{
+        list-style: none;
+        font-size: $font-size;
+    }
+   
+    a{
+        color: $color;
+        text-decoration: none;
+        transition: $transition;
+    }
+
+    a:hover{
+        color: $hoverColor;
+    }
+}

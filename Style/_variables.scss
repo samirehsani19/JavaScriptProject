@@ -1,0 +1,20 @@
+$bgground: rgb(138, 0, 138);
+$hoverColor: #fff;
+$color: #ccc;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@mixin widthHeight($width, $height) {
+    width: $width;
+    min-height: $height;
+}
+
+$transition: 0.6s ease-in-out;
+$padding: 7px;
+$margin: 7px;
+$font-size: 26px;

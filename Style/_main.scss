@@ -1,0 +1,114 @@
+@import './variables';
+
+body{
+    background-color: olive;
+
+}
+.container{
+    
+    @include widthHeight(100%, 100vh);
+    
+    .main{
+        display: flex;
+        justify-content: center;
+        margin: 40px 0px ;
+    }
+}
+
+#search-form{
+    display: flex;
+    @include widthHeight(80%, 40px);
+    
+    #search-text{
+        width: 100%;
+    }
+
+    .fa-search{
+        height: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $hoverColor;
+        font-size: $font-size;
+    }
+
+    // #search-btn{
+    //     width: 20%;
+    //     background: #68b4f3;
+    //     transition: $transition;
+    //     border: 1px solid blue;
+    // }
+    // #search-btn:hover{
+    //    background: #0b7dda;
+    // }
+}
+
+
+#movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .movie{
+        @include widthHeight(250px, 410px);
+        margin: $margin;
+        padding: $padding;
+        align-items: center;
+        box-shadow: 0px 0px 5px -3px black;
+        border: 1px solid maroon;
+        transition: 0.4s ease-in-out;
+
+        &:hover{
+           box-shadow: 0px 0px 8px 1px paleturquoise;
+        }
+        
+
+        img{
+            @include widthHeight(232px, 390px);
+        }
+
+        .title{
+            font-size: 15px;
+            margin: 10px;
+        }
+        .detial-item{
+            text-align: center;
+            min-height: 56px;
+            color: $color;
+            @include flexCenter();
+
+            p{
+                margin: $margin;
+            }
+        }
+        
+        .movie-btn{
+            width: 100% !important;
+        }
+    }
+}
+
+@media only screen and(max-width: 700px){
+    #search-form{
+        width: 72%;
+    }
+    
+    // #search-text, #search-btn{
+    //     height: 34px;
+    // }
+
+    #search-form .fa-search{
+        font-size: 18px;
+    }
+}
+
+@media only screen and(min-width: 700px){
+    #search-form{
+        width: 90%;
+    }
+}
+
+#trailer-btn{
+    color: $hoverColor;
+    text-decoration: underline;
+}

@@ -1,0 +1,66 @@
+@import './variables';
+
+footer{
+
+    background-color: $bgground;
+    @include flexCenter();
+
+
+    ul{
+        @include flexCenter();
+        width: 80%;
+        margin: $margin;
+        padding: $padding;
+    }
+    
+    .copyright{
+        width: 50%;
+        text-align: center;
+        margin: $margin;
+        p{
+            margin-top: 10px;
+        }
+    }
+
+    li{
+        list-style: none;
+    }
+
+
+    a{
+        text-decoration: none;
+        font-size: $font-size;
+        color: $color;
+        transition: $transition;
+    }
+    
+    a:hover{
+        color: $hoverColor;
+    }
+
+    p{
+        color: $color;
+    }
+}
+
+#bg-btn{
+    border-radius: 8px;
+    background-color: olive;
+    transition: 0.4s ease-in-out;
+
+    &:hover{
+        background-color: limegreen;
+
+    }
+}
+
+@media only screen and(max-width: 750px)
+{
+    #bg-btn{
+        display: none;
+        background-color: red;
+    }
+
+}
+
+
