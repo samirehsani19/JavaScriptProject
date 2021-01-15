@@ -2,8 +2,15 @@
 $(document).ready(()=>{
     $('#search-form').on('input', (e)=>{
         let searchText= $('#search-text').val();
-        getMovie(searchText);
-        e.preventDefault();
+        const regex= "^[a-zA-Z0-9 ]{3,25}$";
+        const CheckValidInput = RegExp(regex);
+        var result =CheckValidInput.test(searchText);
+        
+        if(result)
+        {
+            getMovie(searchText);
+            e.preventDefault();
+        }
     })
     
 });
@@ -24,8 +31,6 @@ function getMovie(searchText){
    fetch(apiKey + searchText)
    .then(response => response.json())
    .then(data => {  
-    console.log(data);
-
 
        let output='';
         data.Search.forEach(movie => {
