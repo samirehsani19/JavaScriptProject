@@ -19,6 +19,6 @@ jobs:
       with:
         enabled-static-website: 'true'
         folder: 'JavaScriptProject'
-        connection-string: ${{ API_KEY }}
+        connection-string: ${{ secrets.API_KEY }}
 
   
