@@ -5,7 +5,8 @@ $(document).ready(()=>{
         const regex= "^[a-zA-Z0-9 ]{3,25}$";
         const CheckValidInput = RegExp(regex);
         var result =CheckValidInput.test(searchText);
-        
+        GetApiKey();
+
         if(result)
         {
             getMovie(searchText);
@@ -16,16 +17,16 @@ $(document).ready(()=>{
 });
 
 let apiKey='';
-$.getJSON("../Key.json", function(key) {
-    apiKey =key.apiKey + '&s=';
-    if(apiKey=='&s='){GetKey()}
-
-});
-
-function GetKey()
+function GetApiKey()
 {
-    $.getJSON("../Dev.key.json", (key)=>{ apiKey =key.apiKey + '&s='; })
+    $.getJSON("../Dev.key.json", (key)=>{ apiKey =key.apiKey + '&s='; }) 
+    if(apiKey=='&s='){TryGetApiKey()}
 }
+
+function TryGetApiKey(){
+    $.getJSON("../Key.json", (key)=> { apiKey =key.apiKey + '&s='; })
+}
+
 
 function getMovie(searchText){
     
