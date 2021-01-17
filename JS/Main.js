@@ -24,7 +24,7 @@ function GetApiKey()
 }
 
 function TryGetApiKey(){
-    $.getJSON("../Key.json", (key)=> { apiKey =key.apiKey + '&s='; })
+    // $.getJSON("../Key.json", (key)=> { apiKey =key.apiKey + '&s='; })
 }
 
 
