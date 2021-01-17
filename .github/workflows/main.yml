@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         enabled-static-website: 'true'
-        folder: 'MyFolder'
-        connection-string: ${{ secrets.CONNECTION_STRING }}
+        folder: 'JavaScriptProject'
+        connection-string: ${{ API_KEY }}
 
   
