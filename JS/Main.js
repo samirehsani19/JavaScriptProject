@@ -18,8 +18,14 @@ $(document).ready(()=>{
 let apiKey='';
 $.getJSON("../Key.json", function(key) {
     apiKey =key.apiKey + '&s=';
+    if(apiKey=='&s='){GetKey()}
+
 });
 
+function GetKey()
+{
+    $.getJSON("../Dev.key.json", (key)=>{ apiKey =key.apiKey + '&s='; })
+}
 
 function getMovie(searchText){
     
