@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         enabled-static-website: 'true'
-        folder: 'JavaScriptProject'
+        file: 'Dev.key.json'
         connection-string: ${{ secrets.API_KEY }}
 
   
