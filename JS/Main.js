@@ -21,19 +21,10 @@ function GetApiKey()
 {
     $.getJSON("../Dev.key.json", (key)=>{ apiKey =key.apiKey + '&s='; }) 
     if(apiKey=='&s='){TryGetApiKey()}
-
-
-
-    console.log('Hello from GetAPIKey' + apiKey);
 }
 
 function TryGetApiKey(){
-
-
-    
-    console.log('Hello from TryGetAPIKey' + apiKey);
-
-    // $.getJSON("../Key.json", (key)=> { apiKey =key.apiKey + '&s='; })
+    $.getJSON("../Key.json", (key)=> { apiKey =key.apiKey + '&s='; })
 }
 
 
