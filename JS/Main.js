@@ -2,12 +2,12 @@
 $(document).ready(()=>{
     $('#search-form').on('input', (e)=>{
         let searchText= $('#search-text').val();
-        
+
         const regex= "^[a-zA-Z0-9 ]{3,25}$";
         const CheckValidInput = RegExp(regex);
         var result =CheckValidInput.test(searchText);
-        GetApiKey();
-
+        TryGetApiKey();
+        
         if(result)
         {
             getMovie(searchText);
