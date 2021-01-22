@@ -5,7 +5,7 @@ $(document).ready(()=>{
         const regex= "^[a-zA-Z0-9 ]{3,25}$";
         const CheckValidInput = RegExp(regex);
         var result =CheckValidInput.test(searchText);
-        //GetApiKey();
+        GetApiKey();
 
         if(result)
         {
@@ -16,8 +16,7 @@ $(document).ready(()=>{
     
 });
 
-let apiKey='http://www.omdbapi.com/?i=tt3896198&apikey=41afbcc7' + '&s=';
-/*
+let apiKey='';
 function GetApiKey()
 {
     $.getJSON("../Dev.key.json", (key)=>{ apiKey =key.apiKey + '&s='; }) 
@@ -28,7 +27,7 @@ function TryGetApiKey(){
     $.getJSON("../Key.json", (key)=> { apiKey =key.apiKey + '&s='; })
 }
 
-*/
+
 function getMovie(searchText){
     
     if(searchText=="")
